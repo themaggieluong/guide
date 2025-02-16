@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Guide - Designed for Septa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 4 References -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Link to FontAwesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- Your custom JavaScript -->
+    <script src="js/app.js"></script>
+
+    <!-- Link to image for the favicon -->
+    <link rel="icon" href="images/septaLogo.png">
+</head>
+
+<body>
+
+<!-- Top Navigation Bar -->
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <!-- Logo -->
+      <a class ="navbar-brand" href="index.html">
+          <img alt="Septa Logo" src="images/septaLogo.png" style="width:40px;">
+          &nbsp;&nbsp;Guide
+      </a>
+
+    <!-- Toggler Icon for responsiveness -->
+    <button id="toggle-icon" class="navbar-toggler secured" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <!--Menu sets on the left -->
+        <ul class="navbar-nav mr-auto">
+        </ul>
+    <!--Menu sets on the right -->
+    <!--Each individual item can be secured by adding the class: secured -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item secured">
+                <a id="link-trip" class="nav-link" href="#"><i class="fa fa-link"></i> Trip Creator </a>
+            </li>
+            <li class="nav-item secured">
+                <a id="link-history" class="nav-link" href="#"><i class="fa fa-link"></i> Rider History </a>
+            </li>
+            <li class="nav-item secured">
+                <a id="link-logout" class="nav-link" href="#"><i class="fa fa-sign-out"></i>Logout</a>
+            </li>
+        </ul>    
+    </div>
+</nav>
+
+<br><br><br><br>
+
+<!--Start container for BS4 (Bootstrap 4) formatting-->
+<div class="container-fluid">
+
+    <div class="row text-center">
+        <div class="col-md-12">
+			&nbsp; <!-- place holder for additional top row content -->
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-2"></div>
+
+		<div class="col-md-8 content-wrapper " id="div-login" style="display: none;">
+                <form id='form-login'>
+				<label for="username">User name:</label>
+				<input type="text" name="username" id="username" class="form-control" >
+				<label for="password">Password:</label>
+                <input type="password" name="password" id="password" class="form-control" >
+                <br>
+				<div class="text-center">
+				<input type="button" value="Login" name="btnLogin" id="btnLogin" class="btn btn-primary" style="font-size:2em;width:100%;" >
+                </div>
+                <br>
+                <div id='login_message' class="">
+                </div>
+			</form>
+		</div>
+
+		<div class="col-md-8 content-wrapper " id="div-trip" style="display: none;">
+			<div>
+                <h1>Trip Creator</h1>
+                <form id = "form-trip">
+                    <label for="startStation">Start Station:</label>
+                    <select id="startStation" name="startStation" class="form-control">
+                        <option value="">Select Start</option>
+                        <option value="1" name ="1" id = "1"> Fern Rock Transportation Center</option>
+                        <option value="2" name ="2" id = "2">Olney Transportation Center</option>
+                        <option value="3" name ="3" id = "3">Logan Station</option>
+                        <option value="4" name ="4" id = "4">Wyoming Station</option>
+                        <option value="5" name ="5" id = "5">Hunting Park Station</option>
+                        <option value="6" name ="6" id = "6">Erie Station</option>
+                        <option value="7" name ="7" id = "7">Allegheny Station</option>
+                        <option value="8" name ="8" id = "8">North Philadelphia Station</option>
+                        <option value="9" name ="9" id = "9">Susquehanna-Dauphin Station</option>
+                        <option value="10" name ="10" id = "10">Cecil B. Moore Station</option>
+                        <option value="11" name ="11" id = "11">Girard Station</option>
+                        <option value="12" name ="12" id = "12">Fairmount Station</option>
+                        <option value="13" name ="13" id = "13">Spring Garden Station</option>
+                        <option value="14" name ="14" id = "14">Race-Vine Station</option>
+                        <option value="15" name ="15" id = "15">City Hall Station</option>
+                        <option value="16" name ="16" id = "16">Walnut-Locust Station</option>
+                        <option value="17" name ="17" id = "17">Lombard-South Station</option>
+                        <option value="18" name ="18" id = "18">Ellsworth-Federal Station</option>
+                        <option value="19" name ="19" id = "19">Tasker-Morris Station</option>
+                        <option value="20" name ="20" id = "20">Snyder Station</option>
+                        <option value="21" name ="21" id = "21">Oregon Staton</option>
+                        <option value="22" name ="22" id = "22">NRG Station</option>
+                    </select>
+                    <br>
+                    <label for="endStation">End Station:</label>
+                    <select id="endStation" name="endStation" class="form-control">
+                        <option value="">Select Start</option>
+                        <option value="1" name ="1" id = "1"> Fern Rock Transportation Center</option>
+                        <option value="2" name ="2" id = "2">Olney Transportation Center</option>
+                        <option value="3" name ="3" id = "3">Logan Station</option>
+                        <option value="4" name ="4" id = "4">Wyoming Station</option>
+                        <option value="5" name ="5" id = "5">Hunting Park Station</option>
+                        <option value="6" name ="6" id = "6">Erie Station</option>
+                        <option value="7" name ="7" id = "7">Allegheny Station</option>
+                        <option value="8" name ="8" id = "8">North Philadelphia Station</option>
+                        <option value="9" name ="9" id = "9">Susquehanna-Dauphin Station</option>
+                        <option value="10" name ="10" id = "10">Cecil B. Moore Station</option>
+                        <option value="11" name ="11" id = "11">Girard Station</option>
+                        <option value="12" name ="12" id = "12">Fairmount Station</option>
+                        <option value="13" name ="13" id = "13">Spring Garden Station</option>
+                        <option value="14" name ="14" id = "14">Race-Vine Station</option>
+                        <option value="15" name ="15" id = "15">City Hall Station</option>
+                        <option value="16" name ="16" id = "16">Walnut-Locust Station</option>
+                        <option value="17" name ="17" id = "17">Lombard-South Station</option>
+                        <option value="18" name ="18" id = "18">Ellsworth-Federal Station</option>
+                        <option value="19" name ="19" id = "19">Tasker-Morris Station</option>
+                        <option value="20" name ="20" id = "20">Snyder Station</option>
+                        <option value="21" name ="21" id = "21">Oregon Staton</option>
+                        <option value="22" name ="22" id = "22">NRG Station</option>
+                    </select>
+                    <br>
+
+                    <div class="text-center">
+                        <input type="button" value="Create Trip" id="btntrip" class="btn btn-secondary" style="font-size:2em;width:100%;" >
+                    </div>
+                </form>
+                <br>
+                <div id='createTrip_message'></div>   
+                <input type="text" id="usertoken" name="usertoken">
+            </div>
+		</div>
+
+        <div class="col-md-8 content-wrapper " id="div-newTrip" style="display: none;">
+			<div>
+                <h1>New Trip Created</h1>
+                
+                <table  id="table-trip" class = "table table-bordered"> 
+                    <tr>                
+                    <th>Station Name</th>
+                    </tr>
+                    
+                    <tr> 
+                        <td>
+                                <!--reference todo app - create a new function call it detailtripcontroller - make the dot the detail button
+                                Because tripPlan returns a list of the stations, it is not individual instances-->
+                                <div id="tripDirection"> </div>
+                        </td>
+                        <td>
+                            <div id ="stationStatus"> <input onclick="statusController(trip_id)" type="button" class="dot float-center">
+                            <!--<input onclick="detailController(trip_id)" type="button" class="dot1 float-center"> -->
+                        </td>
+                    </tr>
+                   <tr>
+                       <td>
+                        <div id="tripPlan"> </div>
+                       </td>
+                       <td>
+                        <div id ="stationStatus"> <input onclick="statusController(trip_id)" type="button" class="dot1 float-center">
+                    </td>
+                   </tr>
+                </table>
+                <br>
+                <div class="text-center">
+                    <input type="button" value="Edit Trip" id="btnEditTrip" class="btn btn-tertiary" style="font-size:1.5em;width:100%;" >
+                </div>
+                <br>
+            <div>
+                <input type = hidden text="type" id="trip_id" name="trip_id">
+            </div>
+      
+        
+
+		 <!--is this needed?
+         <div class="col-md-8 content-wrapper " id="div-status" style="display: none;">
+            <span id="status"></span>
+            <form>
+                <input type = hidden id="trip_id">
+            </form>
+          
+        </div>
+      is this needed?-->
+
+
+        
+		<div class="col-md-8 content-wrapper " id="div-history" style="display: none;">
+			<div>
+                History
+
+                <table id = "table-history" class ="table table-bordered">
+                    <tr>
+                        <th>Date</th>
+                        <th>Start Station</th>
+                        <th>End Station</th>
+                    </tr>
+                </table>
+
+            </div>
+		</div>
+	
+    <div class="col-md-2"></div>
+    </div>
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        <div>
+            &nbsp;
+        </div>
+    </div>
+</div>
+
+</div> <!-- container //-->
+
+<br>
+    <div class="container-fluid bg-dark text-white">
+        <div class="row">
+            <div class="col-md-12 text-center">
+            &copy; Guide - Created for Septa Riders
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+				&nbsp; <!-- place holder for additional footer content -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

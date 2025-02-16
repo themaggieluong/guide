@@ -1,0 +1,60 @@
+body{
+	background-color: #343a40;
+}
+label{
+    margin-top:10px;
+}
+.container-fluid{
+	background-color: #fff;
+	min-height: 400px;
+}
+.btn-default{
+    background-color: #CCC;
+    color: black;
+}
+.btn {
+    white-space:normal;
+}
+
+.locked {
+    display: none !important; 
+}
+
+.unlocked {
+    border-width: initial;
+}
+
+.secured {
+    border-width: initial;
+}
+#rcorners1 {
+    border-radius: 25px;
+    background: #F14728;
+    padding: 20px; 
+    width: 250px;
+    height: 75px;  
+  }
+
+  .dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  
+  .dot1 {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(30, 179, 97);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .circle {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border: 2px solid blue;
+  }	
